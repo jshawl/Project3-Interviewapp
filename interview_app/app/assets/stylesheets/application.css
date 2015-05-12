@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
+p, li{
+  font-size:1.5em;
+}
+.center-div{
+  margin-left:25%;
+  width:70%;
+}
+
+.job-seeker-info{
+  background:grey;
+  color:white;
+}
+
+.next-int{
+  background:green;
+  color:white;
+}
+
+.contact-info{
+  background:grey;
+  color:white;
+}
+
+.other-meetings{
+  background:green;
+  color:white;
+}
+
+.meeting-interviewers{
+  background:grey;
+  color:white;
+  margin:10%;
+}
+
+.contact-info-content{
+  background:grey;
+  color:white;
+}

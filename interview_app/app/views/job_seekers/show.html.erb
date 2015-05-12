@@ -1,0 +1,52 @@
+
+<div class = "center-div">
+  <div class = "job-seeker-info">
+    <img src="<% @job_seeker.img_url %>">
+    <h1>Welcome back, <span class="name"><%= @job_seeker.name %></span></h1>
+    <h2>field: <%= @job_seeker.field %> , career-level: <%= @job_seeker.career_level %> , address: <%= @job_seeker.address %> , city/town: <%= @job_seeker.city%></h2>
+  </div>
+
+  <div class="next-int">
+    <h2>Your next Interview is on: <%= @meetings.date %> at <%= @meetings.time %></h2>
+
+    <p>It is with
+    <%= @interviewer.name %> and you are interviewing for the
+    <%= @interviewer.position %> at <% @meetings.company_name %>
+    </p>
+  </div>
+
+  <div class="contact-info"><p>Contact Information/Interview address</p></div>
+
+  <div class="contact-info-content">
+    <ul>
+      <li>Person of Contact: <%= @interviewer.poc %></li>
+      <li>Phone #: <%= @interviewer.phone %></li>
+      <li>Company address: <%= @meetings.company_address %></li>
+      <li>Thoughts to remember: <%= @interviewer.notes %></li>
+      <li>This is interview: # <%= @meetings.interview_num %></li>
+    </ul>
+  </div>
+
+  <div class="other-meetings">
+    <h2>Other Meetings</h2>
+    <% @meeting.each do |meeting| %>
+      <p><%= meeting.date %> at <% meeting.time %>
+      <p>Position:<%= meeting.position %></p>
+      <p>Description:<%= meeting.description %></p>
+      <p>Interview #:<%= meeting.interview_num %></p>
+    </br>
+      <p>Company Name:<%= meeting.company_name %></p>
+      <p>Company Address:<%= meeting.company_address%></p>
+      <p>City:<%= meeting.city%></p>
+        <div class="meeting-interviewers">
+          <% @interviewers.each do |interviewer| %>
+           <p><u>Interviewer</u>: <%= interviewer.name %></p>
+           <p>Position:<%= interviewer.position %></p>
+           <p>Phone #:<%= interviewer.phone %></p>
+           <p>Person of Contact:<%= interviewer.poc %></p>
+           <p>Notes:<%= interviewer.notes%></p>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+</div>

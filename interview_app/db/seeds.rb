@@ -15,7 +15,8 @@ JobSeeker.create([
    field:"Management",
    career_level:"Mid-level",
    address:"6700 Apple Orchid Drive",
-   city:"Alexandria, VA"}
+   city:"Alexandria, VA",
+   img_url:"http://www.aaronhuniuphotography.com/wp-content/uploads/2011/03/Kaite-Oswald-Headshots-San-Juan-Capistrano-Photographer-Orange-County_012.jpg"}
   ])
 
 
@@ -24,22 +25,40 @@ Meeting.create([
   {date:'05/14/2015',
    time:"1:20 pm",
    position:"Project Coordinator",
-   description:"Good interpersonal skills with the ability to communicate effectively with internal and external customers required."},
+   description:"Good interpersonal skills with the ability to communicate effectively with internal and external customers required.",
+   interview_num:"1",
+   city:"Bethesda, MD",
+   company_name:"1776",
+   company_address:"7300 Grenville Lane"
+  },
 
   {date:'05/15/2015',
    time:"9:00 am",
    position:"Assoc. Project Manager",
-   description:"Responsible for providing project support to the Program Manager including but not limited to financial tracking, scheduling, evaluating and reporting project..." },
+   description:"Responsible for providing project support to the Program Manager including but not limited to financial tracking, scheduling, evaluating and reporting project...",
+   interview_num:"2",
+   city:"McLean, VA",
+   company_name:"The BOSS Group",
+   company_address:"9889 Roundtree Grove Road"
+   },
 
   {date:'05/16/2015',
    time:"12:00 pm",
    position:"Program Manager",
-   description:"Plans and directs the work of a team of 14 intelligence and research analysts. Develops and executes management plan."},
+   description:"Plans and directs the work of a team of 14 intelligence and research analysts. Develops and executes management plan.",
+   interview_num:"3",
+   city:"Baltimore, MD",
+   company_name:"Amex International",
+   company_address:"2000 Clarkbar Drive"},
 
   {date:'05/17/2015',
    time:"10:30 am",
    position:"Junior Project Manager",
-   description:"Project deliverables and other project materials. We are looking for an awesome Jr Project Manager, a hard working go-getter with a strong urge to organize..."}
+   description:"Project deliverables and other project materials. We are looking for an awesome Jr Project Manager, a hard working go-getter with a strong urge to organize...",
+   interview_num:"1",
+   city:"Columbia, MD",
+   company_name:"Phone2Action",
+   company_address:"425 Orange Grove Blvd."}
 ])
 
 interviewers = Interviewer.create
@@ -80,10 +99,3 @@ Interviewer.create([
    poc:"Jamison Hardaway",
    notes:"Small Startup, can make plenty of lead way here"}
 ])
-
-address:"7300 Grenville Lane",
-address:"9889 Roundtree Grove Road",
-address: "2000 Clarkbar Drive",
-address:"425 Orange Grove Blvd.",
-address:"01 RFK Road",
-address:"2303 Magic Carpet Way",

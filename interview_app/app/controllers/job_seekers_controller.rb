@@ -1,4 +1,4 @@
-class JobSeekerController < ApplicationController
+class JobSeekersController < ApplicationController
 
   def home
   end
@@ -17,6 +17,10 @@ class JobSeekerController < ApplicationController
   end
 
   def show
+    @meeting = Meeting.all
+    @meetings = Meeting.find(params[:id])
+    @interviewers = Interviewer.all
+    @interviewer = Interviewer.find(params[:id])
     @job_seeker = JobSeeker.find(params[:id])
     # render :show
   end
