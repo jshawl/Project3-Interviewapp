@@ -10,6 +10,10 @@ Rails.application.routes.draw do
    resources :interviewers
    resources :meetings
 
+   devise_scope :user do
+     get "users/sign_up" => "devise/job_seeker#new"
+     get "users/sign_in" => "devise/job_seeker#show"
+   end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

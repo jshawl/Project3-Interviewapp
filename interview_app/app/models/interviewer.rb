@@ -1,3 +1,4 @@
 class Interviewer < ActiveRecord::Base
-  belongs_to :meetings
+  has_many :meetings
+  has_many :job_seekers, through: :meetings
 end

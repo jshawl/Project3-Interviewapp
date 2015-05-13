@@ -1,5 +1,7 @@
 class JobSeekersController < ApplicationController
 
+# before_action :authenticate_user!
+
   def home
   end
 
@@ -12,16 +14,17 @@ class JobSeekersController < ApplicationController
   end
 
   def create
-    @job_seeker = JobSeeker.create!(meeting_params)
+    @job_seeker = JobSeeker.create!(job_seeker_params)
     redirect_to(@job_seeker)
   end
 
   def show
-    @meeting = Meeting.all
-    @meetings = Meeting.find(params[:id])
-    @interviewers = Interviewer.all
-    @interviewer = Interviewer.find(params[:id])
-    @job_seeker = JobSeeker.find(params[:id])
+    @meeting = Meeting.find(params[:id])
+    # @meetings = Meeting.find(params[:id])
+    # @interviewer = Interviewer.find(params[:id])
+    @job_seeker = @meeting.job_seeker
+    @meetings = Meeting.all
+    @interviewer = Interviewer.all
     # render :show
   end
 
