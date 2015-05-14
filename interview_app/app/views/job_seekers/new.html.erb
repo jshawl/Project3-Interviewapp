@@ -1,37 +1,38 @@
-<%= form_for @job_seeker do |f| %>
 
-  <div class = "spacer">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  </div>
+<div class = "forminfo">
+  <h1>Your Information</h1>
+  <%= form_for @job_seeker do |f| %>
 
-  <div class = "spacer">
-  <%= f.label :field %>
-  <%= f.text_field :field %>
-  </div>
+    <div class = "spacer">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </div>
 
-  <div class = "spacer">
-  <%= f.label :career_level %>
-  <%= f.text_field :career_level %>
-  </div>
+    <div class = "spacer">
+    <%= f.label :field %>
+    <%= f.text_field :field %>
+    </div>
 
-  <div class = "spacer">
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  </div>
+    <div class = "spacer">
+    <%= f.label :career_level %>
+    <%= f.text_field :career_level %>
+    </div>
 
-  <div class = "spacer">
-  <%= f.label :city %>
-  <%= f.text_field :city %>
-  </div>
+    <div class = "spacer">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    </div>
 
-  <div class = "spacer">
-  <%= f.label :img_url %>
-  <%= f.text_field :img_url %>
-  </div>
+    <div class = "spacer">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+    </div>
 
-  <div class = "spacer">
-  <%= f.submit %>
-  </div>
-  
-<% end %>
+    <div class = "spacer">
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>

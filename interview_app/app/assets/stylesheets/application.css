@@ -65,3 +65,8 @@ input{
   color:white;
   padding:2%;
 }
+
+.forminfo{
+  float:left;
+  width:33%;
+}

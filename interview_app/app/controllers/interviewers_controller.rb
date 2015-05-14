@@ -4,13 +4,14 @@ class InterviewersController < ApplicationController
     @interviewers = Interviewer.all
   end
 
-  def new
-    @interviewer = Post.new
-  end
-
   def create
-    @interviewer = Interviewer.create!(interviewer_params)
-    redirect_to(@post)
+    @job_seeker = JobSeeker.find(params[:id])
+    @interviewers = Interviewer.create!(interviewer_params)
+    redirect_to(@job_seeker)
+
+  #   @job_seeker = JobSeeker.find(params[:id])
+  #   @interviewer = Interviewer.create!(interviewer_params)
+  #   redirect_to(@interviewer)
   end
 
   def show

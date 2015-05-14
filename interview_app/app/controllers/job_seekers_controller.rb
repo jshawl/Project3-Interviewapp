@@ -10,6 +10,8 @@ class JobSeekersController < ApplicationController
   end
 
   def new
+    @interviewer = Interviewer.new
+    @meeting = Meeting.new
     @job_seeker = JobSeeker.new
   end
 
@@ -19,12 +21,9 @@ class JobSeekersController < ApplicationController
   end
 
   def show
-    @meeting = Meeting.find(params[:id])
     # @meetings = Meeting.find(params[:id])
     # @interviewer = Interviewer.find(params[:id])
-    @job_seeker = @meeting.job_seeker
-    @meetings = Meeting.all
-    @interviewer = Interviewer.all
+    @job_seeker = JobSeeker.find(params[:id])
     # render :show
   end
 

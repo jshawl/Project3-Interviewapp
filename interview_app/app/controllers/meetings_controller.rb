@@ -4,13 +4,13 @@ class MeetingsController < ApplicationController
     @meetings = Meeting.all
   end
 
-  def new
-    @meeting = Meeting.new
-  end
-
   def create
+    @job_seeker = JobSeeker.find(params[:id])
     @meeting = Meeting.create!(meeting_params)
-    redirect_to(@meeting)
+    redirect_to(@job_seeker)
+
+    # @interviewers = Interviewer.create!(interviewer_params)
+    # redirect_to(@job_seeker)
   end
 
   def show
