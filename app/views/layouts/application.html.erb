@@ -11,7 +11,12 @@
   <h1>LandIt</h1>
   <p>Structure for the chaos that is your job search</p>
   <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
-
+      <% if notice %>
+         <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+         <p class="alert"><%= alert %></p>
+      <% end %>
 <%= yield %>
 
 </body>
