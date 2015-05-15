@@ -1,34 +1,17 @@
 
-<div class = "center-div">
+<div class = "content">
   <div class = "job-seeker-info">
-    <img src="<% @job_seeker.img_url %>">
+    <img src="<%=@job_seeker.img_url %>">
     <h1>Welcome back, <span class="name"><%= @job_seeker.name %></span></h1>
     <h2>field: <%= @job_seeker.field %> , career-level: <%= @job_seeker.career_level %> , address: <%= @job_seeker.address %> , city/town: <%= @job_seeker.city%></h2>
     <button>edit</button>
 
+    <button id= "to-meeting-form"><a href= "/meetings/new">Add a meeting</a></button>
 
-<form action='http://www.indeed.com/jobs' METHOD='GET'>
-    <input type="hidden" name="indpubnum" value="629149479801505">
 
-    <table cellspacing='0' style='font-family:arial'>
-        <tr><td style='font-size:16px;color:#F60'><b>Job Search</b></td><td> </td></tr>
-        <tr>
-            <td><input name='q' value='' size='25'></td>
-            <td><input type='submit' value='Find Jobs'/></td>
-        </tr>
-        <tr>
-            <td valign='top' style='font-size:10px'>job title, keywords, company, location</td>
-            <td colspan='1' valign='top' style='font-size:13px;'>
-                <span id=indeed_at>
-                    <a href="http://www.indeed.com/?indpubnum=629149479801505" style="text-decoration:none; color: #000">jobs by</a>
-                    <a href="http://www.indeed.com/?indpubnum=629149479801505" title=Job Search>
-                        <img src="http://www.indeed.com/p/jobsearch.gif" style="border: 0;vertical-align: middle;" alt="job search">
-                    </a>
-                </span>
-            </td>
-        </tr>
-    </table>
-</form>
-
-</div>
+    <span id=indeed_at><a href="http://www.indeed.com/">jobs</a> by <a
+    href="http://www.indeed.com/" title="Job Search"><img
+    src="http://www.indeed.com/p/jobsearch.gif" style="border: 0;
+    vertical-align: middle;" alt="Indeed job search"></a></span>
+  </div>
 </div>

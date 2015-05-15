@@ -14,6 +14,10 @@
  *= require_self
  */
 
+.home-back{
+  background: url("http://exploriasolution.com/wp-content/uploads/2014/07/professional-services-robots.png")
+}
+
 p, li, h1, h2{
   font-size:1.5em;
   font-family: 'Open Sans', sans-serif;
@@ -69,4 +73,56 @@ input{
 .forminfo{
   float:left;
   width:33%;
+}
+
+.header{
+  width:100%;
+  background:rgb(241, 234, 218);
+  margin-left:-1%;
+  margin-top:-3%;
+  margin-right:-20%;
+  width:100%;
+  padding:0;
+}
+
+.header h1{
+  font-size:4em;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 30%;
+  padding-top:5%;
+  padding-left:2%;
+  font-family: 'Nova Square', cursive;
+}
+
+.header p{
+  padding-left:2%;
+}
+
+hr{
+  height: 1%;
+  border:solid;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  margin-top:-.5%;
+}
+
+.covering_div{
+  float:left;
+  background:rgb(241, 234, 218);
+}
+.content{
+  width:50%;
+  margin-left:25%;
+  margin-top:5%;
+  background:white;
+  padding:2%;
+  border-radius:50px;
+  height:100;
+}
+
+button{
+  border-width:1px;
+  border-radius:10px;
+  background:rgb(241, 234, 218);
 }

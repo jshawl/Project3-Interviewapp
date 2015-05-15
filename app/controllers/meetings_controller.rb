@@ -5,12 +5,14 @@ class MeetingsController < ApplicationController
   end
 
   def create
-    @job_seeker = JobSeeker.find(params[:id])
     @meeting = Meeting.create!(meeting_params)
-    redirect_to(@job_seeker)
-
+    redirect_to(@meeting)
     # @interviewers = Interviewer.create!(interviewer_params)
     # redirect_to(@job_seeker)
+  end
+
+  def new
+    @meeting = Meeting.new
   end
 
   def show
