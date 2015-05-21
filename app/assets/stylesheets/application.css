@@ -16,6 +16,7 @@
 
 .home-back{
   background: url("http://exploriasolution.com/wp-content/uploads/2014/07/professional-services-robots.png")
+  /* I recommend downloading this file to avoid broken image urls in the future. */
 }
 
 p, li, h1, h2{
@@ -126,3 +127,5 @@ button{
   border-radius:10px;
   background:rgb(241, 234, 218);
 }
+
+/* Awesome job on your CSS! */

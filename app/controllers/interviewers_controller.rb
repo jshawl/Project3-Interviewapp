@@ -10,6 +10,8 @@ class InterviewersController < ApplicationController
     redirect_to(@job_seeker)
 
   #   @job_seeker = JobSeeker.find(params[:id])
+    #   please remove commented out code in the future
+    #   and use git branches to manage experimental code
   #   @interviewer = Interviewer.create!(interviewer_params)
   #   redirect_to(@interviewer)
   end

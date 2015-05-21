@@ -1,6 +1,8 @@
 class JobSeekersController < ApplicationController
 
 # before_action :authenticate_user!
+  # ^ you can also move this to application_controller to make sure people are signed
+  # in to view any page in your application.
 
   def home
   end
@@ -41,6 +43,7 @@ class JobSeekersController < ApplicationController
     @job_seeker = JobSeeker.find(params[:id])
     @job_seeker.destroy
     redirect_to "/job_seeker"
+    # consider using job_seeker_path instead in case this url changes in the future.
   end
 
   def job_seeker_params
